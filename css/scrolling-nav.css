@@ -90,3 +90,48 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #40bcd6;
 }
+
+
+
+
+
+
+.page1-section
+{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #40bcd6;
+}
+
+.page2-section
+{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #00bcd4;
+}
+
+.page3-section
+{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #40bcd6;
+}
+
+.page4-section
+{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #00bcd4;
+}
+
+.page5-section
+{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #40bcd6;
+}
