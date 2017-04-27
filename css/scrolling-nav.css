@@ -398,7 +398,7 @@ of those sections to manage the look and feel of the site. */
 
 .footer
 { 
-    width:80%;
-    height:20%;
+    width:100%;
+    height:100%;
     background-color: #0091a3;
 }
