@@ -7,6 +7,8 @@
  */
 
 
+
+
 body
 {
     width: 100%;
@@ -395,5 +397,8 @@ of those sections to manage the look and feel of the site. */
 .btnn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
 
 .footer
-{background-color: #0091a3;
+{ 
+    width:80%;
+    height:20%;
+    background-color: #0091a3;
 }
