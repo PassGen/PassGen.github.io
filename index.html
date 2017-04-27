@@ -183,8 +183,8 @@
 <section id="services4" class="page1-section">
         <div class="container">
             <div class="row">
-                
-		    <div class="col-lg-12">
+                <div class="col-lg-12">
+			<h1>Re-Generate</h1>
 			    <img src="https://PassGen.github.io/images/QR code shadow.png" class="center-block img-responsive" width="300">
 		    </div>
 		    </div>
@@ -200,7 +200,6 @@
             <div class="row">
 		    
 		    <div class="col-lg-12">
-			<h1>Re-Generate</h1>
 			    <br><br>
 			    <h3>
 				    <li>The created passwords are stored after encryption as images of QR Code.<br><br>These can be easily retrieved from the phone gallery and decrypted to obtain your passwords</li>
@@ -269,210 +268,6 @@ Just install the application on your Android device, and follow the instructions
             
         </div>
     </section> -->
-	
-	
-	
-	
-	
-	
-	 <!-- Demo Section -->
-      <!--  <section id="demo" class="demo-section">
-            <div class="container">
-                <div class="row">
-           
-                        <div class="col-sm-6">
-				
-				<div>
-                            <script>
-                                
-                                var choice;
-        var page = -1;
-        var input;
-        var password = [];
-
-        var hindi = ["Shek", "Shudo", "Shute", "Shuch", "Shupa", "Shunche", "Shunsaa", "Shunaad", "Shunnoa", "Dass",
-            "Gyar", "Bara", "Terah", "Choda", "Pandra", "Solah", "Satra", "Adhar", "Unees", "Bees",
-            "Ikkis", "Bayis", "Teyee", "Chaubi", "Pachi", "Chabbi", "Satayi", "Adhai", "Unati", "Tees",
-            "Ikati", "Battis", "Tentis", "Chaunti", "Penti", "Chati", "Senti", "Adti", "Untalis", "Chaali",
-            "Ektali", "Byali", "Tenta", "Chaun", "Penta", "Chiya", "Santa", "Arta", "Uncha", "Pacha",
-            "Ikyav", "Bavan", "Trip", "Chau", "Pacha", "Chapp", "Sata", "Adha", "Unsad", "Saad",
-            "Iksad", "Baas", "Tirsa", "Chaun", "Pesad", "Chiyas", "Arasad", "Unhat", "aDatar", "Satar",
-            "Ikhat", "Bahat", "Tihat", "Chauha", "Pachhat", "Chihat", "Sathat", "Adhat", "Unassi", "Assi",
-            "ikYas", "baYas", "tiRas", "chAur", "pacH", "chi1", "Yas", "saTTa", "Adhasi", "Navas", "Nabbe",
-            "IkYa", "banVe", "tIran", "chaUra", "paCHan", "ChiYan", "SaTan", "AdhAv", "ninyA", "Eksaw"];
-
-        var newStuff = ["Shun", "eK", "Do", "Tee", "chaA", "PaA", "CHe", "SaA", "Aad", "noA"];
-
-        function name_input() {
-
-            document.getElementById("next_button").style = "display:visible";
-
-            document.getElementById("first").innerHTML = document.getElementById("1_a").innerHTML;
-
-            choice = 1;
-        }
-
-        function date_input() {
-
-            document.getElementById("next_button").style = "display:visible";
-
-            document.getElementById("first").innerHTML = document.getElementById("1_b").innerHTML;
-
-            choice = 2;
-        }
-
-        function next() {
-
-            document.getElementById("next_button").style = "display:none";
-
-            ++page;
-
-            if (page == 0) {
-                switch (choice) {
-                    case 1: input = [document.getElementById("input_1").value, document.getElementById("input_2").value];
-                        break;
-                    case 2: input = [document.getElementById("input_1").value, document.getElementById("input_2").value, document.getElementById("input_3").value];
-                        break;
-                    default: alert("ehdafuq");
-                }
-
-                document.getElementById("first").innerHTML = document.getElementById("2").innerHTML;
-
-                document.getElementById("input_string").innerHTML = input[page];
-            }
-            else
-                if ((choice == 1 && page == 2) || (choice == 2 && page == 3)) {
-                    document.getElementById("first").innerHTML = document.getElementById("3").innerHTML;
-
-                    var output = "";
-
-                    for (var i = 0; i < page; ++i) {
-                        output += password[i];
-                    }
-
-                    document.getElementById("password").innerHTML = output;
-                }
-                else {
-                    document.getElementById("first").innerHTML = document.getElementById("2").innerHTML;
-
-                    document.getElementById("input_string").innerHTML = input[page];
-                }
-        }
-
-        function convert(c) {
-
-            document.getElementById("next_button").style = "display:visible";
-
-            var sum = 0;
-
-            if (choice == 1 && page == 0) {
-                for (var i = 0; i < input[0].length; ++i) {
-                    sum += input[0].charCodeAt(i) + 13;
-                }
-            }
-            else
-                if (choice == 1 && page == 1) {
-                    for (var i = 0; i < input[1].length; ++i) {
-                        sum += input[1].charCodeAt(i) + 5;
-                    }
-                }
-                else
-                    if (choice == 2) {
-                        sum += parseInt(input[page]);
-                    }
-                    else {
-                        alert("Choice " + choice + " page " + page);
-                    }
-
-            if (c == -1) {
-                if (sum > 0 && sum <= 100) {
-
-                    password[page] = hindi[sum - 1];
-                    document.getElementById("output_string").innerHTML = hindi[sum - 1];
-
-                }
-                else {
-                    var thousand, hundred, ten, unit;
-
-                    thousand = Math.floor(sum / 1000);
-                    hundred = Math.floor((sum - thousand * 1000) / 100);
-                    ten = Math.floor((sum - (thousand * 1000 + hundred * 100)) / 10);
-                    unit = Math.floor((sum - (thousand * 1000 + hundred * 100 + ten * 10)));
-
-                    password[page] = newStuff[ten] + newStuff[unit];
-
-                    alert(sum);
-                    alert(thousand);
-                    alert(hundred);
-                    alert(ten);
-                    alert(unit);
-                    document.getElementById("output_string").innerHTML = newStuff[ten] + newStuff[unit];
-                }
-            }
-            else {
-                password[page] = sum.toString(c);
-                document.getElementById("output_string").innerHTML = sum.toString(c);
-            }
-        }
-                                
-                            </script>
-                            <div id="first">
-                                <input id="type_name" name="type" type="radio" onclick="name_input();">Name
-                                <input id="type_date" name="type" type="radio" onclick="date_input();" />Date Of Birth
-                            </div>
-                            <div id="1_a" style="display:none">
-                                Enter First Name : 
-                                <input id="input_1" type="text" />
-                                <br> Enter Second Name : 
-                                <input id="input_2" type="text" />
-                                <br>
-                            </div>
-                            <div id="1_b" style="display:none">
-                                Enter Day : 
-                                <input id="input_1" type="text" />
-                                <br> Enter Month : 
-                                <input id="input_2" type="text" />
-                                <br> Enter Year : 
-                                <input id="input_3" type="text" />
-                            </div>
-                            <div id="2" style="display:none">
-                                <p id="input_string"></p>
-                                Binary 
-                                <input id="input_1" name="input2" type="radio" onclick="convert(2);" />
-                                <br> Octal 
-                                <input id="input_2" name="input2" type="radio" onclick="convert(8);" />
-                                <br> Hex 
-                                <input id="input_3" name="input2" type="radio" onclick="convert(16);" />
-                                <br> "SPECIAL OOOOOH" 
-                                <input id="input_3" name="input2" type="radio" onclick="convert(-1);" />
-                                <br>
-                                <p id="output_string"></p>
-                            </div>
-                            <div id="3" style="display:none">
-                                Your Password Is :
-                                <br>
-                                <p id="password"></p>
-                            </div>
-                            <div id="next_button" style="display:none">
-                                <input id="next" type="button" value="Next" onclick="next();" />
-                            </div>
-                        </div>
-                    </div>
-			
-			<div class="col-sm-6">
-			<h2>Here is a live demo to give you an idea of how this app works.</h2>
-			</div>
-                </div>
-		    
-		    
-		   <a class="btn btn-default page-scroll glyphicon glyphicon-arrow-up" href="#page-top"></a> 
-            </div>
-        </section> -->
-	
-	
-	
-	
-	
 	
 	
 	
